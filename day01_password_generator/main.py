@@ -10,3 +10,17 @@
 
 # maybe for later -> password protect this generator 
 # still not secure for sure 
+
+import secrets
+import string
+
+
+
+lowercase = string.ascii_lowercase
+uppercase = string.ascii_uppercase
+numbers = string.digits
+safe_symbols = '!@#$%^&*()-_=+[]{}|;:,.<>?'
+
+lowercase_length = len(lowercase)
+secure_int = secrets.randbelow(lowercase_length)
+print(lowercase[secure_int])
