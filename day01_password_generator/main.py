@@ -21,6 +21,23 @@ uppercase = string.ascii_uppercase
 numbers = string.digits
 safe_symbols = '!@#$%^&*()-_=+[]{}|;:,.<>?'
 
-lowercase_length = len(lowercase)
-secure_int = secrets.randbelow(lowercase_length)
-print(lowercase[secure_int])
+# Verify if input is an int first, idk it works
+while True:
+    password_length = input("How long do you want your password? ")
+    try: 
+        value = int(password_length)
+        if value <= 0:
+            print(f"Passwords can't be negative or zero length!")
+        elif value > 30:
+            print(f"Keep it between 1 and 30 characters!")
+        else:    
+            print(f"The input '{password_length}' is a valid integer.")
+            break
+    except ValueError:
+        print(f"Invalid input! Try again!")
+
+# Check if over large value or negative
+
+#lowercase_length = len(lowercase)
+#secure_int = secrets.randbelow(lowercase_length)
+#print(lowercase[secure_int])
