@@ -35,9 +35,31 @@ while True:
             break
     except ValueError:
         print(f"Invalid input! Try again!")
+# Ask user what they want 
+password_pool = ""
+letters_check = input("Do you want letters in your password? Type Y for Yes, or N for No: ")
+if letters_check == 'Y':
+    password_pool += lowercase + uppercase
+print(password_pool)
 
-# Check if over large value or negative
+numbers_check = input("Do you want numbers in your password? Type Y for Yes, or N for No: ")
+if numbers_check == 'Y':
+    password_pool += numbers
+print(password_pool)
 
-#lowercase_length = len(lowercase)
-#secure_int = secrets.randbelow(lowercase_length)
-#print(lowercase[secure_int])
+symbols_check = input("Do you want symbols in your password? Type Y for Yes, or N for No: ")
+if symbols_check == 'Y':
+    password_pool += safe_symbols
+print(password_pool)
+
+pool_length = len(password_pool)
+generated_password = ""
+
+count = 0 
+while count < value:
+    random_int = secrets.randbelow(pool_length)
+    generated_password += password_pool[random_int]
+    count += 1
+print(generated_password)
+
+# CURRENTLY CLAPPED OUT CODE, WILL FIX LATER LMAO
