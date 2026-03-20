@@ -1,1 +1,0 @@
-# Open Weather! Check the weather for anywhere. First project involving API's 
