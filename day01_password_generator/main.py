@@ -38,17 +38,17 @@ while True:
 # Ask user what they want 
 password_pool = ""
 letters_check = input("Do you want letters in your password? Type Y for Yes, or N for No: ")
-if letters_check == 'Y':
+if letters_check == 'Y' or letters_check == 'y':
     password_pool += lowercase + uppercase
 print(password_pool)
 
 numbers_check = input("Do you want numbers in your password? Type Y for Yes, or N for No: ")
-if numbers_check == 'Y':
+if numbers_check == 'Y' or numbers_check == 'y':
     password_pool += numbers
 print(password_pool)
 
 symbols_check = input("Do you want symbols in your password? Type Y for Yes, or N for No: ")
-if symbols_check == 'Y':
+if symbols_check == 'Y' or symbols_check == 'y':
     password_pool += safe_symbols
 print(password_pool)
 
